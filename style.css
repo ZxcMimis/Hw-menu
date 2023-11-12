@@ -1,0 +1,60 @@
+.menu {
+    position: relative;
+    width: 50px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #808080;
+}
+
+.menu-pages {
+    position: absolute;
+    left: 50px;
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px;
+    transform: translate(-350px);
+    background-color: #808080;
+    z-index: -1;
+    opacity: 0;
+}
+
+.menu:hover .menu-pages {
+    transform: translate(-50px);
+    opacity: 1;
+    z-index: 1;
+    color: white;
+}
+
+.menu-page {
+    display: flex;
+    align-items: center;
+}
+
+.menu-page::before {
+    content: '🔶';
+    margin-right: 5px;
+}
+
+.menu-link {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    color: #F7630C;
+    outline: none;
+}
+
+.menu-text {
+    color: #FFF;
+    font-size: 22px;
+    writing-mode: vertical-rl;
+    cursor: default;
+}
